@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap");
+* {
+  color: aliceblue;
+  background-color: black;
+}
+
+img {
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+label {
+  font-size: xx-large;
+  font-family: "Lobster", cursive;
+  margin: 5px;
+}
+header h1 {
+  background-color: grey;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  border-radius: 5px;
+  border: 2px solid yellow;
+  display: block;
+  width: 100%;
+  padding: 0.1rem;
+  text-transform: capitalize;
+  background-color: white;
+  color: black;
+}
+
+button {
+  width: 100%;
+  margin: 5px;
+  font-style: italic, bold;
+  font-weight: bolder;
+  color: black;
+  background-color: grey;
+}
+
+.container {
+  border: 2px solid white;
+  width: auto;
+  margin: 2px;
+  padding: 0.5rem;
+}
+
+.city-name {
+  border: 3px dashed white;
+  font-size: xx-large;
+  font-family: "Lobster", cursive;
+  /* width: fit-content; */
+  padding: 0.5rem;
+}
+
+.temp-container {
+  border: 5px ridge yellow;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px;
+}
+
+.latlon {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h4,
+h5 {
+  font-family: "PT Sans", sans-serif;
+}
+
+.feels {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.highlight {
+  padding: 3px;
+  background-color: grey;
+  border-radius: 5px;
+}
