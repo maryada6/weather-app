@@ -68,7 +68,7 @@ return(formattedTime);
   { setError(true);
     return;
   }
-  const apiKey="13393b032f8fdee237a93fad4cfb2a54";
+  const apiKey="Your_API_KEY";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&units=metric`;
   setLoading(true);
   setError(false);
