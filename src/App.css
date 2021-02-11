@@ -23,7 +23,7 @@ header h1 {
 
 input {
   border-radius: 5px;
-  border: 2px solid yellow;
+  border: 2px solid grey;
   display: block;
   width: 100%;
   padding: 0.1rem;
@@ -37,14 +37,15 @@ button {
   margin: 5px;
   font-style: italic, bold;
   font-weight: bolder;
-  color: black;
-  background-color: grey;
+  color: white;
+  background-color: rgb(26, 38, 150);
 }
 
 .container {
   border: 2px solid white;
   width: auto;
   margin: 2px;
+  margin-bottom: 5px;
   padding: 0.5rem;
 }
 
@@ -77,7 +78,8 @@ h5 {
 }
 
 .highlight {
-  padding: 3px;
+  padding: 10px;
   background-color: grey;
   border-radius: 5px;
+  color: yellow;
 }
