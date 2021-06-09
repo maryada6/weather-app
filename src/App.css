@@ -25,7 +25,8 @@ input {
   border-radius: 5px;
   border: 2px solid grey;
   display: block;
-  width: 100%;
+  width: 90%;
+  margin:10px auto;
   padding: 0.1rem;
   text-transform: capitalize;
   background-color: white;
@@ -34,7 +35,7 @@ input {
 
 button {
   width: 100%;
-  margin: 5px;
+  margin:0 auto;
   font-style: italic, bold;
   font-weight: bolder;
   color: white;

@@ -18,8 +18,8 @@ import {BiWorld} from 'react-icons/bi';
     return (<div>
   <div className="container">
   <label style={{display:'block'}}>Enter City Name:</label>
-  <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Enter City"/>
-  <button  onClick={()=>fetchWeather()} type="submit">Submit</button>
+  <input className="city-name" type="text" value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Enter City"/>
+  <button  className="city-btn" onClick={()=>fetchWeather()} type="submit">Submit</button>
   </div>
   {(!error && display.cod!==null && input!=='')&&
   <div>

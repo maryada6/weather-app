@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+<script language="JavaScript" src="http://j.maxmind.com/app/geoip.js"></script>
 ReactDOM.render(
   <React.StrictMode>
     <App />

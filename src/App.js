@@ -1,7 +1,9 @@
+
 import './App.css';
 import { Display } from "./displayWeather";
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import { TiWeatherPartlySunny } from 'react-icons/ti';
+
 
 function App() {
   const [input,setInput]=useState('');
@@ -42,6 +44,68 @@ function App() {
     setError(true); 
   });
 }
+
+// Step 1: Get user coordinates
+function getCoordintes() {
+	var options = {
+		enableHighAccuracy: true,
+		timeout: 5000,
+		maximumAge: 0
+	};
+
+	function success(pos) {
+		var crd = pos.coords;
+		var lat = crd.latitude.toString();
+		var lng = crd.longitude.toString();
+		var coordinates = [lat, lng];
+		console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+		getCity(coordinates);
+		return;
+
+	}
+
+	function error(err) {
+		console.warn(`ERROR(${err.code}): ${err.message}`);
+	}
+
+	navigator.geolocation.getCurrentPosition(success, error, options);
+}
+
+// Step 2: Get city name
+async function getCity(coordinates) {
+	var xhr = new XMLHttpRequest();
+	var lat = coordinates[0];
+	var lng = coordinates[1];
+
+	// Paste your LocationIQ token below.
+	xhr.open('GET', "https://us1.locationiq.com/v1/reverse.php?key=pk.d82ba6db6da0758f465df287fc1a507c&lat=" +
+	lat + "&lon=" + lng + "&format=json", true);
+	xhr.send();
+	xhr.onreadystatechange = processRequest;
+	xhr.addEventListener("readystatechange", processRequest, false);
+
+	function processRequest(e) {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var response = JSON.parse(xhr.responseText);
+			var city = response.address.city;
+       setInput(city);
+      return;
+		
+		}
+	}
+}
+
+
+
+
+useEffect(()=>{
+  getCoordintes();
+}
+// eslint-disable-next-line react-hooks/exhaustive-deps
+,[]);
+
+
+
   return( 
 <>
 <header>
