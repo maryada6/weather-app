@@ -2,8 +2,7 @@ Hello guys, Maryada here. I have started learning React.js. React is a JavaScrip
 
 I made a weather app to practice useState hook from react and API calling using JavaScript.
 
-Link to weather-app:
-https://lnkd.in/ghMYPv2
+Link to weather-app:https://mk-weather-app.netlify.app/
 
 Check out my Blog on the weather app:
 https://lnkd.in/gb6JsrW
