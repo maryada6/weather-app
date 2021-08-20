@@ -23,7 +23,7 @@ import {BiWorld} from 'react-icons/bi';
   </div>
   {(!error && display.cod!==null && input!=='')&&
   <div>
-    <div className="container">
+    <div className="container center-info">
     <h2 className="city-name"><GoLocation/>{display.name}</h2>  
     <div className="temp-container">
     <h1><img loading='lazy' src= {`http://openweathermap.org/img/wn/${display.weather[0].icon}@2x.png`} alt="Weather day"/> <span style={{display:'inline', textTransform:'capitalize'}}>{display.main.temp}°C</span></h1>
